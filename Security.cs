@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace CryptSecurity {
+namespace PublicUtility.CryptSecurity {
   public static class Security {
 
     #region PRIVATE METHODS
