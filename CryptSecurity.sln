@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptSecurity", "CryptSecurity.csproj", "{9A80E757-FEA8-48E5-8CD2-D2430841F236}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "..\ConsoleApp\ConsoleApp.csproj", "{720916CD-07D2-476B-9EA8-D6B103C67260}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptSecurity", "CryptSecurity.csproj", "{9A80E757-FEA8-48E5-8CD2-D2430841F236}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{9A80E757-FEA8-48E5-8CD2-D2430841F236}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A80E757-FEA8-48E5-8CD2-D2430841F236}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A80E757-FEA8-48E5-8CD2-D2430841F236}.Release|Any CPU.Build.0 = Release|Any CPU
-		{720916CD-07D2-476B-9EA8-D6B103C67260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{720916CD-07D2-476B-9EA8-D6B103C67260}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{720916CD-07D2-476B-9EA8-D6B103C67260}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{720916CD-07D2-476B-9EA8-D6B103C67260}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
