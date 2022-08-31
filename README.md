@@ -14,7 +14,7 @@ install-Package PublicUtility.CryptSecurity
 ## Usage
 
 ```csharp
-using CryptSecurity;
+using PublicUtility.CryptSecurity;
 
 string nameToCrypt = "My name is Lucas!"; // example string to crypt and decrypt
 string key = "12345678"; // example key to encrypt and decrypt
