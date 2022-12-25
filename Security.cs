@@ -6,13 +6,8 @@ namespace PublicUtility.CryptSecurity {
   public static class Security {
 
     #region PRIVATE METHODS
-    private static bool IsNumber(this string input) {
-      foreach(var c in input) {
-        if(!char.IsNumber(c))
-          return false;
-      }
-      return true;
-    }
+    
+    private static bool IsNumber(this string input) => !input.Where(x => !char.IsNumber(x)).Any();
 
     private static string CheckCryptInput(string input, string privateKeyNumber) {
       string result;

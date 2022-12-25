@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
    <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
-    <Title>PublicUtility.CryptSecurity</Title>
+    <Title>CryptSecurity</Title>
     <Company>Lucas F Sousa</Company>
     <Description>Helper for string encryption and decryption.</Description>
     <PackageProjectUrl>https://github.com/lucas-fsousa/CryptSecurity</PackageProjectUrl>
@@ -13,7 +13,7 @@
     <PackAsTool>False</PackAsTool>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageTags>DOTNET;.NET6; .NET; CRYPT; DECRYPT; HASH; MD5; HELPER; ASPNET</PackageTags>
+    <PackageTags>DOTNET;.NET7; .NET; CRYPT; DECRYPT; HASH; MD5; HELPER; ASPNET</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Lucas F Sousa</Authors>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
@@ -21,7 +21,8 @@
     <PackageId>PublicUtility.$(AssemblyName)</PackageId>
     <AssemblyVersion>1.0.0.1</AssemblyVersion>
     <FileVersion>1.0.0.1</FileVersion>
-    <Version>1.0.1</Version>
+    <Version>2.0.0</Version>
+    <PackageReleaseNotes>update to .NET7</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,7 +30,7 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="6.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="7.0.1" />
   </ItemGroup>
 
 </Project>
