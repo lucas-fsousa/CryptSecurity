@@ -36,16 +36,27 @@ namespace PublicUtility.CryptSecurity {
     #endregion
 
     public static string GetHashMD5(string str) {
-      MD5 md5Hash = MD5.Create();
-      byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(str));
+      byte[] data = MD5.HashData(Encoding.UTF8.GetBytes(str));
 
       var sBuilder = new StringBuilder();
 
-      for(int i = 0; i < data.Length; i++) {
+      for(int i = 0; i < data.Length; i++)
         sBuilder.Append(data[i].ToString("x2"));
-      }
-
+      
       return sBuilder.ToString();
+    }
+
+    public async static ValueTask<string> GetHashMD5Async(string str, CancellationToken cancellationToken) {
+      return await Task.Run(async () => {
+        byte[] data = await MD5.HashDataAsync(new MemoryStream(Encoding.UTF8.GetBytes(str)), cancellationToken);
+
+        var sBuilder = new StringBuilder();
+
+        for(int i = 0; i < data.Length; i++)
+          sBuilder.Append(data[i].ToString("x2"));
+
+        return sBuilder.ToString();
+      }, cancellationToken);
     }
 
     public static string GetHashPbkdf2(string str) {
@@ -56,7 +67,8 @@ namespace PublicUtility.CryptSecurity {
 
     public static string GetHash() {
       Guid guid = Guid.NewGuid();
-      return Convert.ToBase64String(Encoding.UTF8.GetBytes(guid.ToString().Replace("-", "")));
+      var base64 = Convert.ToBase64String(Encoding.UTF8.GetBytes(guid.ToString().Replace("-", "")));
+      return GetHashMD5(base64);
     }
 
     public static string Decrypt(string str, string privateKeyNumber) {
