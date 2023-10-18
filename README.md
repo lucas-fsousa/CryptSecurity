@@ -1,4 +1,4 @@
-# Crypt Security
+# Crypt Security - Archived
 
 Helper for string encryption and decryption.
 
